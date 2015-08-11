@@ -9,15 +9,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ["MATSUMOTO, Katsuyoshi"]
   spec.email         = ["github@katsyoshi.org"]
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
-  spec.homepage      = ""
+  spec.summary       = %q{itamae plugin recipe pyenv}
+  spec.description   = %q{itamae plugin recipe pyenv}
+  spec.homepage      = "https://github.com/katsyoshi/itamae-plugin-recipe-pyenv"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "itamae"
+  spec.add_dependency "itamae", "~> 1.2"
 
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"

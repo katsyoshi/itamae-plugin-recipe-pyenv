@@ -22,7 +22,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You write config file:
+
+```json
+{
+  "pyenv" : {
+    "scheme" : "git", // set scheme your using git clone protocol, git or https
+    "versions" : ["2.7.5", "3.4.3"],
+    "global" : "3.4.3"
+  }
+}
+```
+
+Add your itamae recipe:
+```ruby
+include_recipe 'plenv::system'
+```
+
+Exec script:
+```console
+$ bundle exec itamae local recipe.rb -j plenv.json
+```
 
 ## Development
 
