@@ -36,12 +36,12 @@ You write config file:
 
 Add your itamae recipe:
 ```ruby
-include_recipe 'plenv::system'
+include_recipe 'pyenv::system'
 ```
 
 Exec script:
 ```console
-$ bundle exec itamae local recipe.rb -j plenv.json
+$ bundle exec itamae local recipe.rb -j pyenv.json
 ```
 
 ## Development
