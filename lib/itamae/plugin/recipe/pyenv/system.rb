@@ -23,7 +23,7 @@ end
 
 node[:pyenv][:global].tap do |version|
   execute "pyenv global #{version}" do
-    command "#{pyenv_init} pyenv install #{version}"
+    command "#{pyenv_init} pyenv global #{version}"
     not_if  "#{pyenv_init} pyenv version | grep #{version}"
   end
 end
