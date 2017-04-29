@@ -46,7 +46,7 @@ Exec script:
 $ bundle exec itamae local recipe.rb -j pyenv.json
 ```
 
-Append this to .bashrc:
+Define environment variable: (exp: .bashrc)
 ```console
 export PYENV_ROOT="/usr/local/pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -78,7 +78,7 @@ Exec script:
 $ bundle exec itamae local recipe.rb -j pyenv.json
 ```
 
-Append this to .bashrc:
+Define environment variable: (exp: .bashrc)
 ```console
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
