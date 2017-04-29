@@ -1,9 +1,9 @@
 case node[:platform]
-  when "debian", "ubuntu"
-    package "build-essential"
+when 'debian', 'ubuntu'
+  package 'build-essential'
 end
 
-package "git"
+package 'git'
 
 git node[:pyenv][:pyenv_root] do
   repository "#{node[:pyenv][:scheme]}://github.com/pyenv/pyenv.git"
