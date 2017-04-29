@@ -22,6 +22,8 @@ Or install it yourself as:
 
 ## Usage
 
+### Installation for system
+
 You write config file:
 
 ```json
@@ -43,6 +45,46 @@ Exec script:
 ```console
 $ bundle exec itamae local recipe.rb -j pyenv.json
 ```
+
+Append this to .bashrc:
+```console
+export PYENV_ROOT="/usr/local/pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+```
+
+### Installation for a user
+
+You write config file:
+
+```json
+{
+  "pyenv" : {
+    "scheme" : "git", // set scheme your using git clone protocol, git or https
+    "user": "ec2-user",
+    "versions" : ["2.7.5", "3.4.3"],
+    "global" : "3.4.3"
+  }
+}
+```
+
+Add your itamae recipe:
+```ruby
+include_recipe 'pyenv::user'
+```
+
+Exec script:
+```console
+$ bundle exec itamae local recipe.rb -j pyenv.json
+```
+
+Append this to .bashrc:
+```console
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+```
+
 
 ## Development
 
