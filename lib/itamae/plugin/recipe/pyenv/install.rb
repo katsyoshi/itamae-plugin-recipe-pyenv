@@ -1,6 +1,8 @@
 case node[:platform]
 when 'debian', 'ubuntu'
   package 'build-essential'
+when 'redhat', 'fedora', 'amazon'
+  package 'gcc'
 end
 
 package 'git'
