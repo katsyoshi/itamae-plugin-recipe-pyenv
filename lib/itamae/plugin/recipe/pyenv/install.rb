@@ -3,6 +3,8 @@ when 'debian', 'ubuntu'
   package 'build-essential'
 when 'redhat', 'fedora', 'amazon'
   package 'gcc'
+  package 'zlib-devel'
+  package 'openssl-devel'
 end
 
 package 'git'
