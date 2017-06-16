@@ -10,7 +10,7 @@ end
 package 'git'
 
 pyenv = node.pyenv
-
+raise "Node does not include pyenv" if pyenv.nil?
 git pyenv.pyenv_root do
   repository "#{pyenv.scheme}://github.com/pyenv/pyenv.git"
   user node.pyenv.user if pyenv.user
