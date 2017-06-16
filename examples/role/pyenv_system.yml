@@ -1,0 +1,5 @@
+pyenv:
+  scheme: https
+  versions:
+    - 3.6.1
+  global: 3.6.1
