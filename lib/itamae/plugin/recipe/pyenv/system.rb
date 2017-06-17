@@ -1,9 +1,9 @@
 node.reverse_merge!(
   pyenv: {
-    pyenv_root: '/usr/local/pyenv',
-    scheme:     'git',
-    versions:   [],
+    pyenv_root: "/usr/local/pyenv",
+    scheme:     "git",
+    versions:   []
   },
 )
 
-include_recipe 'pyenv::install'
+include_recipe "pyenv::install"

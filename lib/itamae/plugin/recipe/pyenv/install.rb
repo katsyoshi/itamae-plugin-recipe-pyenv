@@ -1,13 +1,13 @@
 case node.platform
-when 'debian', 'ubuntu'
-  package 'build-essential'
-when 'redhat', 'fedora', 'amazon'
-  package 'gcc'
-  package 'zlib-devel'
-  package 'openssl-devel'
+when "debian", "ubuntu"
+  package "build-essential"
+when "redhat", "fedora", "amazon"
+  package "gcc"
+  package "zlib-devel"
+  package "openssl-devel"
 end
 
-package 'git'
+package "git"
 
 pyenv = node.pyenv
 raise "Node does not include pyenv" if pyenv.nil?
