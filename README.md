@@ -1,4 +1,4 @@
-# Itamae::Plugin::Recipe::Pyenv
+# Itamae::Plugin::Recipe::Pyenv [![Build Status](https://travis-ci.org/katsyoshi/itamae-plugin-recipe-pyenv.svg?branch=master)](https://travis-ci.org/katsyoshi/itamae-plugin-recipe-pyenv)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/itamae/plugin/recipe/pyenv`. To experiment with that code, run `bin/console` for an interactive prompt.
 

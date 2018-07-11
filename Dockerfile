@@ -1,15 +1,13 @@
-FROM ruby:2.4
+FROM ruby
 
 RUN apt update
-RUN apt install sudo
+RUN apt install -y sudo
 RUN gem install bundler --no-doc
 RUN mkdir -p /usr/app
 RUN useradd -m -s /bin/bash itamae -b/home
 RUN mkdir -p /home/itamae
+ADD . /usr/app
 WORKDIR /usr/app
-COPY Gemfile Gemfile
-COPY . /usr/app
 RUN bundle install
-RUN itamae local examples/cookbook/pyenv/recipe.rb -y examples/role/pyenv_system.yml
-RUN itamae local examples/cookbook/pyenv/recipe.rb -y examples/role/pyenv_user.yml
-RUN bundle exec rake test
+RUN bundle exec itamae local examples/cookbook/pyenv/recipe.rb -y examples/role/pyenv_system.yml
+RUN bundle exec itamae local examples/cookbook/pyenv/recipe.rb -y examples/role/pyenv_user.yml
