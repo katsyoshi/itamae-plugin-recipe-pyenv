@@ -1,10 +1,12 @@
 case node.platform
 when "debian", "ubuntu"
   package "build-essential"
+  package "libffi-dev"
 when "redhat", "fedora", "amazon"
   package "gcc"
   package "zlib-devel"
   package "openssl-devel"
+  package "libffi-devel"
 end
 
 package "git"
